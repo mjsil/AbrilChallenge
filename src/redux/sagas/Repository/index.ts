@@ -1,6 +1,7 @@
+import 'react-native-get-random-values';
+import { v4 as uuidv4 } from 'uuid';
 import { put } from 'redux-saga/effects';
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
 
 import { ParamsProps } from '~/redux/ducks/Repositories/Models';
 import { RepositoriesActions } from '~/redux/ducks/Repositories';
@@ -28,6 +29,7 @@ export function* getAllRepositoriesRequest({ params }: { params: ParamsProps }) 
 
     yield put(RepositoriesActions.repositoriesSuccess(formattedRepositories));
   } catch (err) {
+    console.log('>>>>', err);
     yield put(RepositoriesActions.repositoriesFailed());
   }
 }
