@@ -1,3 +1,5 @@
+import { RepositoriesProps } from '~/hooks/Repositories/Models';
+
 export const formatStarsToK = (number: number) => {
   if (number >= 1000) {
     const thousand = Math.floor(number / 1000);
@@ -8,4 +10,11 @@ export const formatStarsToK = (number: number) => {
   }
 
   return number.toString();
+};
+
+export const isSubarray = (
+  repositories: RepositoriesProps[],
+  requestedRepositories: RepositoriesProps[],
+) => {
+  return requestedRepositories.every((item) => repositories.includes(item));
 };
