@@ -4,9 +4,9 @@ import { formatStarsToK } from '~/utils';
 import { Props } from './Models';
 import { Container, ImageWrap, Image, Stars, Content, Header, Title, Subtitle } from './styles';
 
-export const Repository = ({ data }: Props) => {
+export const Repository = ({ data, onPress }: Props) => {
   return (
-    <Container>
+    <Container onPress={() => onPress(data)}>
       <ImageWrap>
         <Image source={{ uri: data.image }} />
       </ImageWrap>
