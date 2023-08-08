@@ -14,19 +14,19 @@
 ## O que foi feito:
 
 - tela com a listagem de todos os repositório
+- infinite scroll para a listagem de repositório
 - tela de detalhamento do repositório
 
 ## Como foi feito:
 
 - foi usado react-native v0.72.3 para geração das telas nativas do app
-
 - o projeto é baseado em TypeScript e com ampla cobertura de tipagem
-- foi usado styled-components para estilização e criação de components reutilizáveis na medida do possível
-  
-- para as chamadas Graphql foi usado o Apollo Client
-- o gerenciamento de estado foi feito com o próprio cache do Apollo Client
-- para navegação foi utilizado o React Navigation que também foi utilizado como transportador de props entre telas e também para criação do header
-- a estrutura base do projeto se encontra dentro da pasta /js onde a estrutura tenta ao máximo centralizar informações e evitar repetição de código sem necessidade
+- foi utilizado styled-components para estilização e criação de components reutilizáveis na medida do possível
+- para as chamadas HTTP foi usado Axios
+- no gerenciamento de estado foi utilizado Redux v4.2.1, foi utilizado para Redux Hooks (useDispatch, useSelector)
+- para lida com efeitos colaterais foi usado Redux-Saga v1.2.3
+- para navegação foi utilizado o React Navigation v6.1.7 que também foi utilizado como transportador de props entre telas
+- a estrutura base do projeto tenta ao máximo centralizar informações e evitar repetição de código sem necessidade
 
 ## O que eu vou ficar devendo:
 
